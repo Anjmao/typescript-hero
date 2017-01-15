@@ -103,6 +103,18 @@ class ResolverConfig {
     }
 
     /**
+     * Array of string that are included in indexing (e.g. src, node_modules/@angular).
+     * If those parts are found after the workspace path is striped away, the file is included.
+     * 
+     * @readonly
+     * @type {string[]}
+     * @memberOf ResolverConfig
+     */
+    public get includePatterns(): string[] {
+        return workspace.getConfiguration(sectionKey).get<string[]>('resolver.includePatterns');
+    }
+
+    /**
      * Array of string that are excluded from indexing (e.g. build, out, node_modules).
      * If those parts are found after the workspace path is striped away, the file is ignored.
      * 

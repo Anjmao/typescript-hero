@@ -162,6 +162,15 @@
           "default": "'",
           "description": "Defines if single or double quotes should be used."
         },
+        "typescriptHero.resolver.includePatterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true,
+          "default": [],
+          "description": "Defines partial pathes that are included during indexing (e.g. 'src' would include files in src folder)."
+        },
         "typescriptHero.resolver.ignorePatterns": {
           "type": "array",
           "items": {
